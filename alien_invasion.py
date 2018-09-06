@@ -1,6 +1,6 @@
 import pygame
 
-import game_function as gf
+import game_functions as gf
 from settings import Settings
 from ship import Ship
 
