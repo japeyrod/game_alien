@@ -7,3 +7,4 @@ class Settings():
         self.scrennt_width = 800
         self.scrennt_height = 600
         self.bg_color = (230, 230, 230)
+        self.ship_speend_factor = 5
