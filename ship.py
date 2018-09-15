@@ -23,9 +23,9 @@ class Ship():
     def update(self):
         if self.moving_right:
             if self.center < self.ai_settings.scrennt_width:
-                self.center += self.ai_settings.ship_speend_factor
+                self.center += self.ai_settings.ship_speed_factor
         elif self.moving_left:
             if self.center > 0:
-                self.center -= self.ai_settings.ship_speend_factor
+                self.center -= self.ai_settings.ship_speed_factor
 
         self.rect.centerx = self.center
