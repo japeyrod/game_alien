@@ -1,8 +1,10 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
 
     def __init__(self, ai_settings, screen):
+        super(Ship, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
         self.image = pygame.image.load("images/ship.bmp")
@@ -22,10 +24,14 @@ class Ship():
 
     def update(self):
         if self.moving_right:
-            if self.center < self.ai_settings.scrennt_width:
+            if self.center < self.ai_settings.screen_width:
                 self.center += self.ai_settings.ship_speed_factor
         elif self.moving_left:
             if self.center > 0:
                 self.center -= self.ai_settings.ship_speed_factor
 
         self.rect.centerx = self.center
+
+    def center_ship(self):
+        """居中"""
+        self.center = self.screen_rect.centerx
